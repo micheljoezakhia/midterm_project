@@ -95,3 +95,10 @@ FEED_EXPORT_ENCODING = "utf-8"
 FEEDS = {
     "output.json": {"format": "json", "overwrite": True},
 }
+
+ITEM_PIPELINES = {
+    "webscraper.pipelines.MongoPipeline": 300,
+}
+
+MONGO_URI = "mongodb://localhost:27017"
+MONGO_DATABASE = "scraper_db"
